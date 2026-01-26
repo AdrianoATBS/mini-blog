@@ -1,4 +1,4 @@
-type BotaoProps = {
+interface BotaoProps {
     texto: string;
     onClick?: () => void;
 };

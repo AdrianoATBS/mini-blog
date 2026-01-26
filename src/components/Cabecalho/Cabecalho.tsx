@@ -16,8 +16,8 @@ export default function Cabecalho() {
     return (
         <>
             <header className="px-6 py-4 bg-fundo-secundario">
-                <div className="flex items-center ">
-                    <div className="flex-1"/>
+                <div className="flex items-center">
+                    <div className="flex-[1.9]" />
                     <div className="relative w-full max-w-56">
 
                         <input
