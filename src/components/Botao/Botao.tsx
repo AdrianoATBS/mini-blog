@@ -5,7 +5,9 @@ interface BotaoProps {
 };
 
 export default function Botao({ texto, onClick, disabled }: BotaoProps) {
+
     return(
+        
         <>
             <button onClick={onClick} disabled={disabled} className="border bg-acoes-primaria rounded-lg 
             px-4 text-white hover:bg-hover hover:transform active:scale-95
