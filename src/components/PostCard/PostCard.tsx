@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import { getUsers } from "@/service/users.service";
 interface PostCardProps {
     titulo: string;
     conteudo: string;

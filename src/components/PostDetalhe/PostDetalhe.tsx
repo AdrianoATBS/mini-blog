@@ -1,13 +1,13 @@
 'use client';
 import PostDetalheCard from "./PostDetalheCard";
-import { postsMock } from "@/mocks/posts.mock";
-import { usersMock } from "@/mocks/users.mock";
+
+
 import Botão from "@/components/Botao/Botao";
 import {useRouter} from "next/navigation";
-export default function PostDetalhe({ postId }: { postId: number }) {
+import { Post } from "@/types/Post";
+import { User } from "@/types/User";
+export default function PostDetalhe({post,user} : {post: Post; user?: User;}) {
 
-    const post = postsMock.find((post) => post.id === postId);
-    const user = usersMock.find((user) => user.id === post?.userId);
     const router = useRouter();
 
     const handleVoltar = () => {
@@ -21,7 +21,7 @@ export default function PostDetalhe({ postId }: { postId: number }) {
             </div>
                  
             <div className="flex justify-center items-center">
-                <PostDetalheCard posts={post} user={user} />
+                <PostDetalheCard post={post} user={user} />
             </div>
         </>
     )

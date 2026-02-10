@@ -3,6 +3,7 @@ import {postsMock} from "@/mocks/posts.mock";
 import PerfilCabecalho from "@/components/PerfilCabecalho/PerfilCabecalho";
 import ListaPostUsuario from "@/components/ListaPostUsuario/ListaPostUsuario";
 export default async function UserPage({params}: {params:Promise<{id: string}>}) {
+    
     const {id} = await params;
 
     console.log("ID da URL", id);
