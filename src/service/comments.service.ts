@@ -1,8 +1,7 @@
-export function getCommentsByPostId(postId: number) {
-    return fetch(`https://jsonplaceholder.typicode.com/comments?postId=${postId}`)
-        .then(response => response.json())
-        .catch(error => {
-            console.error('Error fetching comments:', error);
-            throw error;
-        });
+export async function getCommentsByPostId(postId: number) {
+    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`);
+    if(!response.ok) {
+        throw new Error('Erro ao buscar comentários');
+    }   
+    return response.json();
 }

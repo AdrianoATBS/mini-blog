@@ -1,14 +1,21 @@
-import { usersMock } from "@/mocks/users.mock";
-import {postsMock} from "@/mocks/posts.mock";
+import { getPosts } from "@/service/posts.service";
+import { getUsers } from "@/service/users.service";
 import PerfilCabecalho from "@/components/PerfilCabecalho/PerfilCabecalho";
 import ListaPostUsuario from "@/components/ListaPostUsuario/ListaPostUsuario";
+import { User } from "@/types/User";
+import { Post } from "@/types/Post";
+
 export default async function UserPage({params}: {params:Promise<{id: string}>}) {
     
     const {id} = await params;
 
-    console.log("ID da URL", id);
-    const user = usersMock.find(user => user.id === Number(id));
-    const postsDoUsuario = postsMock.filter(post => post.userId === Number(id));
+    const users: User[] = await getUsers();
+    const posts: Post[] = await getPosts();
+
+    const user = users.find((user) => user.id === parseInt(id));
+    const postsDoUsuario = posts.filter((post) => post.userId === parseInt(id));
+
+
 
     if (!user) return <h1>Usuário não encontrado</h1>
 

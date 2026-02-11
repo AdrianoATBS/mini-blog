@@ -1,22 +1,15 @@
-export function getUsers() {
-    return fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
-        .catch(error => {
-            console.error('Error fetching users:', error);
-            throw error;
-        });
+export async function getUsers() {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    if (!response.ok) {
+        throw new Error('Erro ao buscar usuários');
+    }
+    return response.json();
 }
 
-export function getUserById(id: number) {
-    return fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to fetch user');
-            }
-            return response.json();
-        })
-        .catch(error => {
-            console.error('Error fetching user:', error);
-            throw error;
-        });
+export async function getUserById(id: number) {
+        const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+        if (!response.ok) {
+            throw new Error('Erro ao buscar usuário');
+        }
+        return response.json();
 }
