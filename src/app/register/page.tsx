@@ -15,7 +15,9 @@ export default function Register(){
             <div className="pl-5 pt-6 ">
                 <Botao texto="Voltar" onClick={handleVoltar} />
             </div>
-            <Formulario campos={[
+            <Formulario 
+            titulo="Registro"   
+            campos={[
                 { name: "nome", label: "Nome", type: "text", placeholder: "Digite seu nome" },
                 { name: "email", label: "Email", type: "email", placeholder: "Digite seu email" },
                 { name: "password", label: "Senha", type: "password", placeholder: "Digite sua senha" },
