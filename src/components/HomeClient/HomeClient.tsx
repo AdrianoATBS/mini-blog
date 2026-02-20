@@ -20,7 +20,7 @@ export default function HomeClient({posts, users}: {posts: Post[], users: User[]
      <div >
 
       <main className="p-6 ">
-        <div className="p-6 grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="pt-6 grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
         {postsAtuais.map((post) =>
          {
             const user = users.find((user) => user.id === post.userId);

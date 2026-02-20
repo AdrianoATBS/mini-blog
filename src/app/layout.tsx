@@ -20,7 +20,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className= {`${inter.variable} ${dmSans.variable} antialiased bg-fundo ` }
+        className= {`${inter.variable} ${dmSans.variable} antialiased bg-fundo 
+        text-texto-principal min-h-screen flex flex-col` }
       >
         {children}
       </body>

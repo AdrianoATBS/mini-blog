@@ -18,7 +18,29 @@
 
   --font-texto-geral: var(--fonte-texto-geral);
   --font-titulo: var(--fonte-titulo);
+}
 
+@layer components{
+  .titulo-principal{
+    @apply text-4xl font-semibold tracking-tight text-titulo;
+    font-family: var(--fonte-dm-sans-titulo);
+  }
+  .titulo-secao{
+    @apply text-2xl font-semibold  text-titulo;
+    font-family: var(--fonte-dm-sans-titulo);
+  }
+  .titulo-card{
+    @apply text-xl font-semibold text-titulo;
+    font-family: var(--fonte-dm-sans-titulo);
+  }
+  .texto-base{
+    @apply text-base leading-relaxed  text-texto-principal;
+    font-family: var(--fonte-inter-geral);
+  }
+  .texto-suave{
+    @apply text-sm  text-texto-secundario;
+    font-family: var(--fonte-inter-geral);
+  }
 }
 
 html, body{
@@ -26,4 +48,7 @@ html, body{
   padding: 0;
   box-sizing: border-box;
  
+}
+body{
+  font-family: var(--fonte-inter-geral);
 }

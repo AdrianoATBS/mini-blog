@@ -12,7 +12,7 @@ export default function Register(){
     
     return(
         <>
-            <div className="pl-5 pt-6">
+            <div className="pl-5 pt-6 ">
                 <Botao texto="Voltar" onClick={handleVoltar} />
             </div>
             <Formulario campos={[

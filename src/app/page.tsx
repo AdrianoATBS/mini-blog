@@ -8,10 +8,18 @@ export default async function Home() {
    const users = await getUsers();
 
   return (
-     <div >
+     < >
+      <div className="bg-fundo min-h-screen">
         <Cabecalho />
+        
+         <div className="max-w-7xl mx-auto px-4">
          <HomeClient posts={posts} users={users} />
+         </div>
+      </div>
       
-     </div>
+
+ 
+      
+     </>
   );
 }

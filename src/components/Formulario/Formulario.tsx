@@ -19,7 +19,7 @@ export default function Formulario({ campos }: FormularioProps) {
     }   
     return(
 
-        <div className="flex justify-center items-center pt-4 flex-col gap-6 ">
+        <div className="flex justify-center items-center pt-4 flex-col gap-6 pb-6 ">
             <h1 className='text-titulo font-[--fonte-titulo] text-2xl'>Registro</h1>
             <form onSubmit={handleSubmit} className='border border-borda rounded-2xl p-6 shadow-md'>
                 {campos.map((campo) => (
