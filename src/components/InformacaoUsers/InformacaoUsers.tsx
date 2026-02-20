@@ -2,7 +2,6 @@ import { UserPerfil } from "../../types/UserPerfil";
 import Link from "next/link";
 export default function InformacaoUsers({ user }: { user: UserPerfil }) {
     return(
-        
         <div className="bg-card border border-borda rounded-2xl p-8 shadow-sm flex flex-col gap-8">
             <div className="flex flex-col gap-1">
                 <h2 className="titulo-secao text-titulo">{user.name}</h2>

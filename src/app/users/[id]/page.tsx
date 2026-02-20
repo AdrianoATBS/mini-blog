@@ -29,7 +29,6 @@ export default async function UserPage({params}: {params:Promise<{id: string}>})
         <>
             <div className="max-full w-full pt-8 pl-9 pr-9 ">
                 <PerfilCabecalho user={user} />
-            
             </div>
 
            

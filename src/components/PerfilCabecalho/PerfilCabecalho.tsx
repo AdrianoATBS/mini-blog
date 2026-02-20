@@ -12,12 +12,21 @@ export default function PerfilCabecalho({ user }: { user: UserPerfil  }) {
     }
 
     return(
-        <>
-            <Botao texto="Voltar" onClick={handleVoltar} />
-            <div className="max-w-3xl mx-auto px-6 py-10 flex flex-col gap-6">
-                <h1 className="titulo-principal text-center">Perfil do Usuario</h1>
-                <InformacaoUsers user={user} />
+        <div className="max-w-3xl mx-auto px-6 py-10 flex flex-col gap-6">
+
+            <div >
+                <Botao
+                texto="Voltar"
+                onClick={handleVoltar}
+                />
             </div>
-        </>
+
+            <h1 className="titulo-principal text-center">
+                Perfil do Usuário
+            </h1>
+
+            <InformacaoUsers user={user} />
+
+        </div>
     )
 }
