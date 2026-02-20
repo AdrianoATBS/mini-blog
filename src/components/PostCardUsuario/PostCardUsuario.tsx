@@ -9,10 +9,12 @@ interface PostCardUsuarioProps {
 export default function PostCardUsuario({posts, autor} : PostCardUsuarioProps) {
     return(
         <div>
-            <div className=" border border-borda bg-cards p-4 rounded-lg shadow-md max-w-md mx-full">
-                <h3 className="text-lg font-semibold font-[--fonte-texto-geral] text-texto-principal ">{posts.title}</h3>
-                <p className="text-lg font-semibold font-[--fonte-texto-geral] text-texto-secundario pt-4">{posts.body}</p>
-                <p className="text-xs text-acoes-secundaria mt-2 block font-[--fonte-texto-geral]">{autor}</p>
+            <div className="bg-card border border-borda rounded-xl p-6 shadow-sm 
+            hover:shadow-md transition duration-200 flex flex-col gap-4">
+
+                <h3 className="titulo-card">{posts.title}</h3>
+                <p className="texto-base">{posts.body}</p>
+                <span className="texto-suave">{autor}</span>
             </div>
     
         </div>

@@ -10,8 +10,8 @@ export default function ListaPostUsuario({ posts, user }: { posts: Post[], user:
 
             <div className="flex flex-col gap-2 text-center">
                 <h2 className="titulo-seca">
-                    Posts de
-                    <span className="text-acoes-primaria">{user.name}</span>
+                    Posts de 
+                    <span className="text-acoes-primaria"> {user.name}</span>
                 </h2>
                 <p className="texto-suave">
                     Confira todos os artigos publicados por este usuário.                
