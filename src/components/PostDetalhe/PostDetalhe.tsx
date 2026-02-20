@@ -15,14 +15,12 @@ export default function PostDetalhe({post,user} : {post: Post; user?: User;}) {
     }
 
     return(
-        <>
-            <div className="pl-5 pt-6">
+        <div className="max-w-3xl mx-auto px-6 py-10 flex flex-col gap-6">
+            <div>
                 <Botão texto="Voltar" onClick={handleVoltar} />
             </div>
-                 
-            <div className="flex justify-center items-center">
-                <PostDetalheCard post={post} user={user} />
-            </div>
-        </>
+
+            <PostDetalheCard post={post} user={user} />
+        </div>
     )
 }

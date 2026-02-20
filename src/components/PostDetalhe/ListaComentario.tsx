@@ -4,14 +4,20 @@ import {Comentario} from "@/types/Comentario";
 export default function ListaComentarios({comentarios}: {comentarios: Comentario[]})
 {
     return(
-        <div className="w-full max-w-lg mx-auto">
-            {comentarios.map((comentario) => (
-                <div key={comentario.id} className="mb-4 p-4 border border-borda rounded-lg">
-                    <h3 className="text-base font-semibold mb-2 font-[--fonte-titulo]">{comentario.name}</h3>
-                    <p className="text-xs text-texto-secundario mb-2 font-[--fonte-texto-geral]">{comentario.email}</p>
-                    <p className="text-sm text-texto-principal font-[--fonte-texto-geral]">{comentario.body}</p>
-                </div>
-            ))}
-        </div>
+       <div className="max-w-3xl mx-auto px-6 py-10">
+            <h2 className="titulo-secao">Comentários</h2>
+
+            <div className="flex flex-col gap-6">
+                {comentarios.map((comentario) => (
+                    <div key={comentario.id} className="bg-card border border-borda rounded-xl
+                    p-6 shadow-sm flex flex-col gap-3">
+                        <h3 className="font-medium text-titulo">{comentario.name}</h3>
+                        <span className="texto-suave">{comentario.email}</span>
+                        <p className="texto-base">{comentario.body}</p>
+                    </div>
+                ))}
+            </div>
+
+       </div>
     )
 }
