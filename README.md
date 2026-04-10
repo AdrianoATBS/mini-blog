@@ -105,5 +105,5 @@ npm run dev
 
 - Melhorar o uso de TypeScript em aplicações reais
 
-🚧 Melhorias Futuras
-Melhorias de UI/UX
+## 🚧 Melhorias Futuras
+- Melhorias de UI/UX
