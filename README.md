@@ -104,3 +104,6 @@ npm run dev
 - Evoluir organização e arquitetura de código
 
 - Melhorar o uso de TypeScript em aplicações reais
+
+🚧 Melhorias Futuras
+Melhorias de UI/UX
