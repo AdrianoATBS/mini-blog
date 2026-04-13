@@ -1,26 +1,25 @@
 'use client';
-import Botao from "@/components/Botao/Botao";
 import Formulario from "@/components/Formulario/Formulario";
-import { useRouter } from "next/navigation";
-export default function Login(){
-    const router = useRouter();
+import Checkbox from "@/components/Checkbox/Checkbox";
+import { MdOutlineEmail } from "react-icons/md";
+import { TbLockPassword } from "react-icons/tb";
 
-     const handleVoltar = () => {
-        router.push("/");
-    }
+export default function Login(){
+   
  
     return(
-        <>
-            <div className="pl-5 pt-6">
-            <Botao texto="Voltar" onClick={handleVoltar} />
-            </div>
-
+        <div className="max-w-7xl mx-auto px-4 pt-10 pb-10">
             <Formulario 
-            titulo="Login"
+            titulo="Bem vindo de volta!"
+            texto="Continue sua jornada"
             campos={[
-                { name: "email", label: "Email", type: "email", placeholder: "Digite seu email" },
-                { name: "password", label: "Senha", type: "password", placeholder: "Digite sua senha" },
-            ]}  />
-        </>
+                { name: "email", label: "Email", type: "email", placeholder: "name@example.com", icon: <MdOutlineEmail /> },
+                { name: "password", label: "Senha", type: "password", placeholder: "••••••••", icon: <TbLockPassword /> },
+            ]}  
+            extra={<Checkbox label="Matenha-me conectado" />}
+            footer="Ainda não tem uma conta?"
+            footerLink="Cadastrar-se"
+            />
+        </div>
     )
 }

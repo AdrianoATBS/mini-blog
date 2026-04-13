@@ -16,10 +16,7 @@ export default async function Home() {
       <HomeClient posts={posts} users={users} />
 
     </div>
-      
 
- 
-      
      </>
   );
 }
