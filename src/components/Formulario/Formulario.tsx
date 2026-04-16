@@ -16,14 +16,13 @@ interface FormularioProps {
     titulo: string;
     texto?: string;
     extra?: ReactNode;
-    footer?:string
-    footerLink?: string;
+    footer?:ReactNode;
     submitText?: string;
     campos: Campo[];
    
 }
 
-export default function Formulario({ titulo, campos, texto, extra, footer, footerLink, submitText }: FormularioProps) {
+export default function Formulario({ titulo, campos, texto, extra, footer, submitText }: FormularioProps) {
     const router = useRouter();
 
     const handleSubmit =(event: React.FormEvent<HTMLFormElement>) => {
@@ -73,10 +72,8 @@ export default function Formulario({ titulo, campos, texto, extra, footer, foote
                 <Botão texto={submitText || "Enviar "} type="submit" />
                 
                 {footer && <p className='texto-suave text-center'>
-                    {footer} {" "}
-                <Link href={footerLink || "/register"} className="text-acoes-primaria hover:underline">
-                    {footerLink}
-                </Link></p>}
+                    {footer} 
+                   </p>}
             </form>
         </div>
     )
