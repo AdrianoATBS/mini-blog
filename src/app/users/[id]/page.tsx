@@ -27,8 +27,8 @@ export default async function UserPage({params}: {params:Promise<{id: string}>})
 
     return(
         <>
-            <div className="max-full w-full pt-8 pl-9 pr-9 ">
-                <PerfilCabecalho user={user} />
+            <div className="max-w-full w-full mx-auto px-6 py-10">
+                <PerfilCabecalho user={user} posts={postsDoUsuario} />
             </div>
 
            
