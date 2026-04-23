@@ -4,7 +4,6 @@ import { MdOutlineBookmarkAdd } from "react-icons/md";
 import { useState } from "react";
 interface PostCardUsuarioProps {
     posts: Post;
-    autor: string;
 }
 
 
