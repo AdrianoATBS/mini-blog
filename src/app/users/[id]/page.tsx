@@ -15,8 +15,6 @@ export default async function UserPage({params}: {params:Promise<{id: string}>})
     const user = users.find((user) => user.id === parseInt(id));
     const postsDoUsuario = posts.filter((post) => post.userId === parseInt(id));
 
-
-
     if (!user) {
         return (
         <div className="min-h-screen flex items-center justify-center">
@@ -27,7 +25,7 @@ export default async function UserPage({params}: {params:Promise<{id: string}>})
 
     return(
         <>
-            <div className="max-w-full w-full mx-auto px-6 py-10">
+            <div className="max-w-full w-full mx-auto px-6 ">
                 <PerfilCabecalho user={user} posts={postsDoUsuario} />
             </div>
 

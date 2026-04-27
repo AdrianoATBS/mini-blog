@@ -10,7 +10,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import { Post } from "@/types/Post";
 export default function InformacaoUsers({ user, posts }: { user: UserPerfil; posts: Post[] }) {
     return(
-        <section className="bg-card border border-borda rounded-2xl p-8 shadow-sm flex flex-col gap-8">
+        <section className="bg-card border border-borda rounded-2xl p-8 shadow-lg flex flex-col gap-8">
             <div className="flex justify-between items-start gap-6">
 
                 <div className=" flex justify-center items-center w-30 h-30 bg-gray-300/45 rounded-xl relative">  
