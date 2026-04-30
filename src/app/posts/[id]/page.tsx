@@ -21,10 +21,10 @@ export default async function PostPage({params}: {params: Promise<{id: string}>}
     const comentariosDoPost = await getCommentsByPostId(postId);
 
     return(
-        <>
-            <PostDetalhe post={post} user={user} />
+        <div className="max-w-7xl mx-auto">
+            <PostDetalhe post={post} user={user} comentario={comentariosDoPost} />
             <ListaComentarios comentarios={comentariosDoPost} />
             
-        </>
+        </div>
     )
 }
