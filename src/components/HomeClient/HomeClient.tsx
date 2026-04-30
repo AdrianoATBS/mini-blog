@@ -22,6 +22,9 @@ export default function HomeClient({posts, users}: {posts: Post[], users: User[]
    const simpels = postsAtuais.slice(1, 3);
    const completo = postsAtuais.slice(3);
 
+   const [mostrarTodos, setMostrarTodos] = useState(false);
+   const postsVisiveis = mostrarTodos ? completo : completo.slice(0, 3);
+
   return (
      <div >
 
@@ -58,9 +61,10 @@ export default function HomeClient({posts, users}: {posts: Post[], users: User[]
             
          })}
       
-         {completo.map((post) => {
+         {postsVisiveis.map((post) => {
             const user = users.find((user) => user.id === post.userId);
             return(
+               
                   <PostCardDestaqueCompleto
                   key={post.id}
                   post={post}
@@ -71,6 +75,13 @@ export default function HomeClient({posts, users}: {posts: Post[], users: User[]
             )
          })}
          </div>
+
+         <div className="flex justify-center">
+            <Botao texto={mostrarTodos ? "Mostrar Menos" : "Mostrar Todos"} 
+            onClick={() => setMostrarTodos(!mostrarTodos)} />
+         </div>
+         
+
          <div className=" flex justify-center items-center gap-6 mt-6">
 
             <Botao texto="Anterior" onClick={() => setPaginaAtual(paginaAtual - 1)} disabled={paginaAtual === 1} />
