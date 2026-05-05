@@ -18,12 +18,15 @@ export default async function PostPage({params}: {params: Promise<{id: string}>}
     
     const users: User[] = await getUsers();
     const user = users.find(u => u.id === post.userId);
+
+    if(!user) return <p>Usuário do post não encontrado</p>;
+
     const comentariosDoPost = await getCommentsByPostId(postId);
 
     return(
         <div className="max-w-7xl mx-auto">
             <PostDetalhe post={post} user={user} comentario={comentariosDoPost} />
-            <ListaComentarios comentarios={comentariosDoPost} />
+            <ListaComentarios comentarios={comentariosDoPost} user={user} />
             
         </div>
     )
