@@ -22,7 +22,7 @@ export default function Botao({ texto, onClick, disabled, type = "button", class
         
         <>
             <button type={type} onClick={onClick} disabled={disabled} 
-            className={`h-10 px-5 rounded-full
+            className={`h-8 px-3 text-sm rounded-full md:h-10 md:px-5 md:text-base
             ${!semBackground && 'bg-acoes-primaria'} ${!semWhite && 'text-white'} text-suave 
             transition duration-200
             ${!semHover && 'hover:bg-hover hover:shadow-md'}
