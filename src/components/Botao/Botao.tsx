@@ -10,20 +10,24 @@ interface BotaoProps {
     className?: string;
     semHover?: boolean;
     semRing?: boolean;
+    semBackground?: boolean;
+    semWhite?: boolean;
+  
 };
 
-export default function Botao({ texto, onClick, disabled, type = "button", className, semHover, semRing }: BotaoProps) {
+export default function Botao({ texto, onClick, disabled, type = "button", className, 
+    semHover, semRing, semBackground, semWhite }: BotaoProps) {
 
     return(
         
         <>
             <button type={type} onClick={onClick} disabled={disabled} 
             className={`h-10 px-5 rounded-full
-            bg-acoes-primaria text-white text-suave 
+            ${!semBackground && 'bg-acoes-primaria'} ${!semWhite && 'text-white'} text-suave 
             transition duration-200
             ${!semHover && 'hover:bg-hover hover:shadow-md'}
-            active:scale-95 focus:outline-none focus:ring-2 
-            ${!semRing && 'focus:ring-acoes-primaria'} disabled:opacity-50
+            active:scale-95 focus:outline-none  
+            ${!semRing && 'focus:ring-acoes-primaria focus:ring-2'} disabled:opacity-50
             disabled:cursor-not-allowed ${className || ''}`}>
                 {texto}
             </button>
