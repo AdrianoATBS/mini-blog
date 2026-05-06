@@ -1,4 +1,5 @@
 import { Inter, DM_Sans} from "next/font/google";
+import Cabecalho from "@/components/Cabecalho/Cabecalho";
 import "./globals.css";
 
 const inter = Inter({
@@ -23,6 +24,7 @@ export default function RootLayout({
         className= {`${inter.variable} ${dmSans.variable} antialiased bg-fundo 
         text-texto-principal min-h-screen flex flex-col` }
       >
+        <Cabecalho />
         {children}
       </body>
     </html>
