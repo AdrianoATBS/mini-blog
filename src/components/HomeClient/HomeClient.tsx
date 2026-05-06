@@ -28,7 +28,9 @@ export default function HomeClient({posts, users}: {posts: Post[], users: User[]
   return (
      <div >
 
-      <main className="max-w-screen mx-auto px-6 py-12 flex flex-col gap-10">
+      <main className="max-w-7xl mx-auto px-4 py-6 flex flex-col gap-10
+      md:px-6 md:py-10 lg:py-12
+      ">
 
          <div className="flex flex-col gap-2
         ">
@@ -38,7 +40,7 @@ export default function HomeClient({posts, users}: {posts: Post[], users: User[]
            <div className="h-1 w-14 rounded-2xl bg-acoes-primaria"></div>
          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
             <PostCard
             key={destaque.id}
             post={destaque}
