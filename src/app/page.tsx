@@ -1,4 +1,4 @@
-import Cabecalho from "@/components/Cabecalho/Cabecalho";
+
 import HomeClient from "@/components/HomeClient/HomeClient";
 import { getPosts } from "@/service/posts.service";
 import { getUsers } from "@/service/users.service";
@@ -10,8 +10,6 @@ export default async function Home() {
   return (
      < >
       <div className="bg-fundo min-h-screen flex flex-col">
-
-      <Cabecalho />
 
       <HomeClient posts={posts} users={users} />
 
