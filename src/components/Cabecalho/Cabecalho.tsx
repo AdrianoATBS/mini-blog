@@ -10,14 +10,19 @@ export default function Cabecalho() {
     return (
         <>
             <header className="w-full bg-card border-b border-borda sticky top-0 z-50">
-                <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+                <div className="max-w-6xl mx-auto px-6 min-h-16 py-3 flex items-center justify-between 
+                gap-2 md:gap-6">
 
-                    <div className="flex items-center gap-8">
-                        <h1 className="titulo-secao tracking-tight">Mini <span className="text-acoes-primaria">Blog</span></h1>
+                    <div className="flex items-center gap-4 md:gap-6">
+                        <h1 className="text-2xl md:text-3xl leading-tight hidden sm:block
+                        ">Mini <span className="text-acoes-primaria">Blog</span></h1>
                         
-                        <h2 className="texto-base text-texto-secundario cursor-pointer hover:text-texto-primario transition duration-200"
+                        <h2 className="text-sm md:texto-base text-texto-secundario cursor-pointer 
+                        hover:text-texto-primario transition duration-200 "
                             onClick={() => userRouter.push("/")}>Início</h2>
-                        <h2 className="texto-base text-texto-secundario cursor-pointer hover:text-texto-primario transition duration-200"
+                        <h2 className="text-sm md:texto-base 
+                         text-texto-secundario cursor-pointer hover:text-texto-primario 
+                         transition duration-200"
                             onClick={() => {
                                 const idAleatorio = Math.floor(Math.random() * 100) + 1; 
                                 userRouter.push(`/posts/${idAleatorio}`); 
@@ -27,7 +32,7 @@ export default function Cabecalho() {
 
                     <div className="flex items-center gap-6">
 
-                        <div className="relative w-48">
+                        <div className="relative w-28 md:w-48  hidden sm:block">
 
                             <input
                                 type="text"
@@ -41,7 +46,7 @@ export default function Cabecalho() {
                                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-texto-secundario cursor-pointer"
                                 />
                         </div>  
-                        <div className="flex gap-3 ">
+                        <div className="flex gap-2 md:gap-3 ">
                             <Botao texto="Registrar" onClick={() => userRouter.push("/register")} 
                                 className="text-acoes-primaria border-none cursor-pointer 
                                 "
@@ -51,7 +56,7 @@ export default function Cabecalho() {
                                 semWhite={true}
                                 />
                             <Botao texto="Login" onClick={() => userRouter.push("/login")} 
-                                className="cursor-pointer"/>
+                                className="cursor-pointer "/>
                         </div>
                     </div>
                    
