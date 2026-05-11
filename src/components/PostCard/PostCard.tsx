@@ -13,7 +13,7 @@ export default function PostCard({ post, autor, userId, postId }: PostCardProps)
     return(
         <section className="flex flex-col bg-card rounded-xl border
          border-borda shadow-lg
-         col-span-1 lg:col-span-2
+         col-span-1  lg:col-span-2  lg:row-span-2
          ">
             <Link href={`/posts/${postId}`} className="w-full h-full ">
                 <Image src={imageUrl} alt="Imagem do post" width={600} height={300} 
