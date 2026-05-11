@@ -9,7 +9,7 @@ interface PostCardDestaqueSimplesProps {
 export default function PostCardDestaqueSimples({ post, autor, userId, postId }: PostCardDestaqueSimplesProps) {
     return(
         <section className=" bg-card p-6 rounded-xl border border-borda 
-            shadow-lg ">
+            shadow-lg  hidden lg:block">
                     <div className="cursor-pointer">
 
                         <Link className="font-bold titulo-card
