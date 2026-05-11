@@ -86,14 +86,20 @@ export default function HomeClient({posts, users}: {posts: Post[], users: User[]
 
          <div className=" flex justify-center items-center gap-6 mt-6">
 
-            <Botao texto="Anterior" onClick={() => setPaginaAtual(paginaAtual - 1)} disabled={paginaAtual === 1} />
-            <span className="texto-base">
+            <Botao texto="Anterior" 
+            onClick={() => setPaginaAtual(paginaAtual - 1)} disabled={paginaAtual === 1}
+            className="text-[0.675rem] lg:texto-base"
+            />
+            
+            <span className="text-[0.775rem] lg:texto-base ">
                Página  
-               <span className="font-semibold text-acoes-primaria"> {paginaAtual}</span> de {totalPaginas}
+               <span className="text-[0.775rem] font-semibold text-acoes-primaria"> {paginaAtual}</span> de {totalPaginas}
                </span>
 
             <Botao texto="Próxima" onClick={() => setPaginaAtual(paginaAtual + 1)} 
-            disabled={paginaAtual === totalPaginas} />
+            disabled={paginaAtual === totalPaginas} 
+            className="text-[0.675rem] lg:texto-base"
+            />
          </div>
       </main>
      </div>
