@@ -14,12 +14,16 @@ export default function ListaPostUsuario({ posts, user }: { posts: Post[], user:
                 <h2 className="titulo-secao">
                     Postagens de 
                     <span className="text-acoes-primaria"> {user.name}</span>
-                    <div className="border-b-8 rounded-2xl border-acoes-primaria w-10 "></div>
+                    <div className="border-b-8 rounded-2xl border-acoes-primaria w-10 mb-2"></div>
                 </h2>
                 
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 grid-flow-dense">
-                    <PostCardDestaque post={posts[0]} />
+                    <div className="hidden lg:block lg:col-span-2">
+                        <PostCardDestaque post={posts[0]} />
+                    </div>
+                   
+                    
                     {posts.slice(1).map((post) => (
                         <PostCardUsuario
                             key={post.id}
