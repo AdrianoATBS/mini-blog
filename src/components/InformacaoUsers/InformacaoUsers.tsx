@@ -11,7 +11,7 @@ import { Post } from "@/types/Post";
 export default function InformacaoUsers({ user, posts }: { user: UserPerfil; posts: Post[] }) {
     return(
         <section className="bg-card border border-borda rounded-2xl p-8 shadow-lg flex flex-col gap-8">
-            <div className="flex flex-col items-center gap-6 sm:flex-col sm:items-center md:flex-row 
+            <div className="flex flex-col items-center gap-6 sm:flex-col sm:items-start md:flex-row 
             md:justify-between lg:flex-row lg:justify-between ">
 
                 <div className=" flex justify-center items-center w-36  lg:w-[120px] lg:h-[120px] 
@@ -32,11 +32,11 @@ export default function InformacaoUsers({ user, posts }: { user: UserPerfil; pos
                     <h1 className="text-lg font-bold text-titulo lg:titulo-principal">{user.name}</h1>
 
                     <div className="flex flex-wrap items-center gap-4 ">
-                        <FaRegBuilding className="text-acoes-primaria text-sm md:text-base lg:text-lg" />
-                        <p className="text-sm text-texto-secundario md:text-base lg:texto-suave">{user.company.name}</p>
+                        <FaRegBuilding className="text-acoes-primaria text-xs sm:text-sm md:text-base lg:text-lg" />
+                        <p className="text-[0.675rem] text-texto-secundario md:text-base lg:texto-suave">{user.company.name}</p>
 
                         <MdOutlineEmail className="text-acoes-primaria text-sm md:text-base lg:text-lg" />
-                        <span className=" text-sm text-texto-secundario  md:text-base lg:texto-suave">{user.email}</span>
+                        <span className=" text-[0.675rem] text-texto-secundario  md:text-base lg:texto-suave">{user.email}</span>
 
                         <FaPhoneAlt className="text-acoes-primaria text-sm md:text-base lg:text-lg"  />
                         <span className="text-[0.675rem] text-texto-secundario md:text-base lg:texto-suave">{user.phone}</span>
